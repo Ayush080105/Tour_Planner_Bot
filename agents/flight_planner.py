@@ -10,8 +10,8 @@ load_dotenv()
 
 # Initialize Amadeus client
 amadeus = Client(
-    client_id=os.getenv("AMADEUS_API_KEY"),
-    client_secret=os.getenv("AMADEUS_SECRET_KEY")
+    client_id=st.secrets["AMADEUS_API_KEY"],
+    client_secret=st.secrets["AMADEUS_SECRET_KEY"]
 )
 
 def is_valid_date(date_str):

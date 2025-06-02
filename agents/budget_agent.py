@@ -2,7 +2,8 @@ import os
 import re
 from dotenv import load_dotenv
 load_dotenv()
-os.environ['GROQ_API_KEY'] = os.getenv("GROQ_API_KEY")
+import streamlit as st
+os.environ['GROQ_API_KEY'] = st.secrets["GROQ_API_KEY"]
 
 from langchain_groq import ChatGroq
 from langchain_core.prompts import ChatPromptTemplate
